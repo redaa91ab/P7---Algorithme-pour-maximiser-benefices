@@ -1,5 +1,4 @@
 import csv 
-from itertools import combinations
 
 class Action:
     """ Class that represents an action """
@@ -41,23 +40,22 @@ def get_best_combo(all_actions):
     """
 
     best_combo = {
-        "actions_list" : None,
+        "actions_list" : [],
         "total_cost" : 0,
         "total_benefits" : 0
         }
-    for repetitions in range(len(all_actions) + 1) :
-        for actions_list in combinations(all_actions, repetitions) :
-            total_cost = 0
-            total_benefits = 0
-            for action in actions_list : 
-                total_cost += action.cost
-                total_benefits += action.benefits_euros
-            if total_cost <= 500 and total_benefits > best_combo["total_benefits"] :
-                best_combo["actions_list"] = actions_list
-                best_combo["total_cost"] = total_cost
-                best_combo["total_benefits"] = round(total_benefits, 2)
-
+    
+    all_actions_sorted = sorted(all_actions, key=lambda a: a.benefits_pourcent, reverse=True)
+    
+    for action in all_actions_sorted :
+        if best_combo["total_cost"] + action.cost <= 500 :
+            best_combo["actions_list"].append(action)
+            best_combo["total_cost"] += action.cost
+            best_combo["total_benefits"] += action.benefits_euros
+    
     return best_combo
+
+ 
 
 def view_best_combo(best_combo):
     """ Print all the necessary information of the best combo"""
@@ -68,8 +66,11 @@ def view_best_combo(best_combo):
             f"\n  Cost : {action.cost}€"
             f"\n  Benefits after 2 years : {action.benefits_euros}€ ({action.benefits_pourcent}%)"
               )
+        
+    
     print(f"\nTotal cost : {best_combo["total_cost"]}€")
-    print(f"Total benefits (after 2 years) : {best_combo["total_benefits"]}€")
+    print(f"Total benefits (after 2 years) : {round(best_combo["total_benefits"], 2)}€")
+    
 
 def run():
     """
@@ -79,7 +80,5 @@ def run():
     best_combo = get_best_combo(all_actions)
     view_best_combo(best_combo)
 
-run()
-    
 
-        
+run()
