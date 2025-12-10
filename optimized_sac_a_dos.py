@@ -1,4 +1,5 @@
 import csv 
+import time
 
 class Action:
     """ Class that represents an action """
@@ -11,8 +12,8 @@ class Action:
             benefits_euros : Use benefits_pourcent and cost to calculate and represent the value in euros of benefits after 2 years
         """
         self.name = name
-        self.cost = int(cost)
-        self.benefits_pourcent = int(benefits_pourcent.replace("%", ""))
+        self.cost = float(cost)
+        self.benefits_pourcent = float(benefits_pourcent.replace("%", ""))
         self.benefits_euros = self.benefits_pourcent * self.cost / 100
 
 
@@ -22,7 +23,7 @@ def get_all_actions():
     Process : Open a csv file, then create an instance of Action class for each line that represent an action, and add it to the list "all_actions" 
     """
     all_actions = []
-    with open('actions_list.csv', mode='r') as csv_file :
+    with open('dataset1.csv', mode='r') as csv_file :
         csv_reader = csv.reader(csv_file) 
         next(csv_reader)
         for row in csv_reader :
@@ -33,29 +34,39 @@ def get_all_actions():
 
     return all_actions
 
-def get_best_combo(all_actions):
-    """
-    Return the best combination of actions from the list all_actions
-    Process : Use the method combination from itertools to loop every possible combinations, if the actual combo is better than the best_combo: replace it
-    """
+def get_best_combo(budget, all_actions) :
+    matrice = [[0 for x in range(budget + 1)] for x in range(len(all_actions) + 1)]
 
+    for action_index in range(1, len(all_actions) + 1):
+        for actual_budget in range(1, budget + 1) :
+            if all_actions[action_index-1].cost <= actual_budget :
+                matrice[action_index][actual_budget] = max(
+                                                            matrice[action_index-1][actual_budget],
+                                                            all_actions[action_index-1].benefits_euros + matrice[action_index-1][actual_budget - all_actions[action_index-1].cost]
+                                                            )
+            else :
+                matrice[action_index][actual_budget] = matrice[action_index-1][actual_budget]
+
+    actual_budget = budget
+    action_index = len(all_actions)
     best_combo = {
         "actions_list" : [],
         "total_cost" : 0,
-        "total_benefits" : 0
+        "total_benefits" : matrice[-1][-1]
         }
-    
-    all_actions_sorted = sorted(all_actions, key=lambda a: a.benefits_pourcent, reverse=True)
-    
-    for action in all_actions_sorted :
-        if best_combo["total_cost"] + action.cost <= 500 :
+
+    while actual_budget >= 0 and action_index >= 0 :
+        action = all_actions[action_index-1]
+        if matrice[action_index][actual_budget] == action.benefits_euros + matrice[action_index-1][actual_budget - action.cost] :
             best_combo["actions_list"].append(action)
             best_combo["total_cost"] += action.cost
-            best_combo["total_benefits"] += action.benefits_euros
-    
+            actual_budget -= action.cost
+        
+        action_index -= 1
+
     return best_combo
 
- 
+
 
 def view_best_combo(best_combo):
     """ Print all the necessary information of the best combo"""
@@ -72,12 +83,22 @@ def view_best_combo(best_combo):
     print(f"Total benefits (after 2 years) : {round(best_combo["total_benefits"], 2)}€")
     
 
+def timer(func):
+    def wrapper():
+        start_time = time.time()
+        result = func()
+        end_time = time.time() - start_time
+        print(f"\nTime : {end_time} seconds")
+        return result
+    return wrapper
+
+@timer
 def run():
     """
     Main entry
     """
     all_actions = get_all_actions()
-    best_combo = get_best_combo(all_actions)
+    best_combo = get_best_combo(500, all_actions)
     view_best_combo(best_combo)
 
 

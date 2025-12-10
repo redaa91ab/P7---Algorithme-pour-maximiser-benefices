@@ -1,4 +1,5 @@
-import csv 
+import csv
+import time
 from itertools import combinations
 
 class Action:
@@ -71,6 +72,16 @@ def view_best_combo(best_combo):
     print(f"\nTotal cost : {best_combo["total_cost"]}€")
     print(f"Total benefits (after 2 years) : {best_combo["total_benefits"]}€")
 
+def timer(func):
+    def wrapper():
+        start_time = time.time()
+        result = func()
+        end_time = time.time() - start_time
+        print(f"\nTime : {end_time} seconds")
+        return result
+    return wrapper
+
+@timer
 def run():
     """
     Main entry
