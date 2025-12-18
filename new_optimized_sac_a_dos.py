@@ -16,8 +16,14 @@ class Action:
         self.benefits_pourcent = float(benefits_pourcent.replace("%", ""))
         self.benefits_euros = self.benefits_pourcent * self.cost / 100
 
-        self.units = int(self.cost*10)
-        self.benefits_units = self.benefits_pourcent * self.units / 100
+
+    @property
+    def units(self):
+        return int(self.cost*100)
+
+    @property
+    def benefits_units(self):
+        return self.benefits_pourcent * self.units / 100
 
 
 def get_all_actions():
@@ -26,7 +32,7 @@ def get_all_actions():
     Process : Open a csv file, then create an instance of Action class for each line that represent an action, and add it to the list "all_actions" 
     """
     all_actions = []
-    with open('dataset1.csv', mode='r') as csv_file :
+    with open('actions_list.csv', mode='r') as csv_file :
         csv_reader = csv.reader(csv_file) 
         next(csv_reader)
         for row in csv_reader :
@@ -38,20 +44,25 @@ def get_all_actions():
 
     return all_actions
 
-def get_best_combo(budget, all_actions) :
-    matrice = [[0 for x in range(budget + 1)] for x in range(len(all_actions) + 1)]
+def get_best_combo(budget_euros, all_actions) :
+    budget_units = budget_euros * 100
+    matrice = [[0 for x in range(budget_units + 1)] for x in range(len(all_actions) + 1)]
 
     for action_index in range(1, len(all_actions) + 1):
-        for actual_budget in range(1, budget + 1) :
-            if all_actions[action_index-1].units <= actual_budget :
+        action_unit = all_actions[action_index-1].units
+        action_benefits_units = all_actions[action_index-1].benefits_units
+        
+
+        for actual_budget in range(1, budget_units + 1) :
+            if action_unit <= actual_budget :
                 matrice[action_index][actual_budget] = max(
                                                             matrice[action_index-1][actual_budget],
-                                                            all_actions[action_index-1].benefits_units + matrice[action_index-1][actual_budget - all_actions[action_index-1].units]
+                                                            action_benefits_units + matrice[action_index-1][actual_budget - action_unit]
                                                             )
             else :
                 matrice[action_index][actual_budget] = matrice[action_index-1][actual_budget]
 
-    actual_budget = budget
+    actual_budget = budget_units
     action_index = len(all_actions)
     best_combo = {
         "actions_list" : [],
@@ -106,7 +117,7 @@ def run():
     Main entry
     """
     all_actions = get_all_actions()
-    best_combo = get_best_combo(5000, all_actions)
+    best_combo = get_best_combo(500, all_actions)
     view_best_combo(best_combo)
 
 

@@ -34,7 +34,7 @@ def get_all_actions():
     Process : Open a csv file, then create an instance of Action class for each line that represent an action, and add it to the list "all_actions" 
     """
     all_actions = []
-    with open('actions_list.csv', mode='r') as csv_file :
+    with open('dataset1.csv', mode='r') as csv_file :
         csv_reader = csv.reader(csv_file) 
         next(csv_reader)
         for row in csv_reader :
