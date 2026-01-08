@@ -42,8 +42,8 @@ def get_all_actions():
 def get_best_combo(all_actions):
     """
     Return the best combination of actions from the list all_actions
-    Process : Use the method combination from itertools to loop every possible combinations,
-    if the actual combo is better than the best_combo: replace it
+    Process : Use the method combination from itertools to loop every possible combinations, if the actual combo is better
+    than the best_combo: replace it
     """
 
     best_combo = {
