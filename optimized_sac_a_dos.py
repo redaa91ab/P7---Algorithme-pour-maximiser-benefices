@@ -148,6 +148,7 @@ def run():
     all_actions = get_all_actions()
     best_combo = get_best_combo(500, all_actions)
     view_best_combo(best_combo)
+    print("test_changement")
 
 
 run()
