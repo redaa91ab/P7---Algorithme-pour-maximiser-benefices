@@ -1,0 +1,94 @@
+List of actions to buy :
+
+> Share-KMTG :
+  Cost : 23.21€
+  Benefits after 2 years : 9.28€(39.97%)
+
+> Share-GHIZ :
+  Cost : 28€
+  Benefits after 2 years : 11.17€(39.89%)
+
+> Share-NHWA :
+  Cost : 29.18€
+  Benefits after 2 years : 11.6€(39.77%)
+
+> Share-UEZB :
+  Cost : 24.87€
+  Benefits after 2 years : 9.81€(39.43%)
+
+> Share-LPDM :
+  Cost : 39.35€
+  Benefits after 2 years : 15.63€(39.73%)
+
+> Share-MTLR :
+  Cost : 16.49€
+  Benefits after 2 years : 6.59€(39.97%)
+
+> Share-USSR :
+  Cost : 25.62€
+  Benefits after 2 years : 10.14€(39.56%)
+
+> Share-GTQK :
+  Cost : 15.4€
+  Benefits after 2 years : 6.15€(39.95%)
+
+> Share-FKJW :
+  Cost : 21.08€
+  Benefits after 2 years : 8.39€(39.78%)
+
+> Share-MLGM :
+  Cost : 0.01€
+  Benefits after 2 years : 0.0€(18.86%)
+
+> Share-QLMK :
+  Cost : 17.38€
+  Benefits after 2 years : 6.86€(39.49%)
+
+> Share-WPLI :
+  Cost : 34.64€
+  Benefits after 2 years : 13.82€(39.91%)
+
+> Share-LGWG :
+  Cost : 31.41€
+  Benefits after 2 years : 12.41€(39.5%)
+
+> Share-ZSDE :
+  Cost : 15.11€
+  Benefits after 2 years : 6.03€(39.88%)
+
+> Share-SKKC :
+  Cost : 24.87€
+  Benefits after 2 years : 9.82€(39.49%)
+
+> Share-QQTU :
+  Cost : 33.19€
+  Benefits after 2 years : 13.14€(39.6%)
+
+> Share-GIAJ :
+  Cost : 10.75€
+  Benefits after 2 years : 4.29€(39.9%)
+
+> Share-XJMO :
+  Cost : 9.39€
+  Benefits after 2 years : 3.75€(39.98%)
+
+> Share-LRBZ :
+  Cost : 32.9€
+  Benefits after 2 years : 13.14€(39.95%)
+
+> Share-KZBL :
+  Cost : 28.99€
+  Benefits after 2 years : 11.35€(39.14%)
+
+> Share-EMOV :
+  Cost : 8.89€
+  Benefits after 2 years : 3.51€(39.52%)
+
+> Share-IFCP :
+  Cost : 29.23€
+  Benefits after 2 years : 11.66€(39.88%)
+
+Total cost : 499.96€
+Total benefits (after 2 years) : 198.55€
+
+Time : 12.169178247451782 seconds

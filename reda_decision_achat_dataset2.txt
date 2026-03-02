@@ -1,0 +1,86 @@
+List of actions to buy :
+
+> Share-ECAQ :
+  Cost : 31.66€
+  Benefits after 2 years : 12.5€(39.49%)
+
+> Share-IXCI :
+  Cost : 26.32€
+  Benefits after 2 years : 10.37€(39.4%)
+
+> Share-FWBE :
+  Cost : 18.31€
+  Benefits after 2 years : 7.29€(39.82%)
+
+> Share-ZOFA :
+  Cost : 25.32€
+  Benefits after 2 years : 10.07€(39.78%)
+
+> Share-PLLK :
+  Cost : 19.94€
+  Benefits after 2 years : 7.96€(39.91%)
+
+> Share-LXZU :
+  Cost : 4.24€
+  Benefits after 2 years : 1.68€(39.54%)
+
+> Share-YFVZ :
+  Cost : 22.55€
+  Benefits after 2 years : 8.82€(39.1%)
+
+> Share-ANFX :
+  Cost : 38.55€
+  Benefits after 2 years : 15.31€(39.72%)
+
+> Share-PATS :
+  Cost : 27.7€
+  Benefits after 2 years : 11.07€(39.97%)
+
+> Share-SCWM :
+  Cost : 6.42€
+  Benefits after 2 years : 2.45€(38.1%)
+
+> Share-NDKR :
+  Cost : 33.06€
+  Benefits after 2 years : 13.19€(39.91%)
+
+> Share-ALIY :
+  Cost : 29.08€
+  Benefits after 2 years : 11.61€(39.93%)
+
+> Share-JWGF :
+  Cost : 48.69€
+  Benefits after 2 years : 19.44€(39.93%)
+
+> Share-JGTW :
+  Cost : 35.29€
+  Benefits after 2 years : 13.91€(39.43%)
+
+> Share-FAPS :
+  Cost : 32.57€
+  Benefits after 2 years : 12.88€(39.54%)
+
+> Share-VCAX :
+  Cost : 27.42€
+  Benefits after 2 years : 10.69€(38.99%)
+
+> Share-LFXB :
+  Cost : 14.83€
+  Benefits after 2 years : 5.9€(39.79%)
+
+> Share-DWSK :
+  Cost : 29.49€
+  Benefits after 2 years : 11.6€(39.35%)
+
+> Share-XQII :
+  Cost : 13.42€
+  Benefits after 2 years : 5.3€(39.51%)
+
+> Share-ROOM :
+  Cost : 15.06€
+  Benefits after 2 years : 5.91€(39.23%)
+
+Total cost : 499.92€
+Total benefits (after 2 years) : 197.96€
+
+Time : 6.608839750289917 seconds
