@@ -30,4 +30,4 @@ mediane_price = data_clean["profit"].median()
 #print(mediane_price)
 
 ecart_type_profit = data_clean["profit"].std()
-print(ecart_type_profit)
+#print(ecart_type_profit)
