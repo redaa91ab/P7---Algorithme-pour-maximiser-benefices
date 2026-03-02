@@ -4,7 +4,7 @@ import time
 
 class Action:
     """ Class that represents an action """
-    def __init__(self, name, cost_euros, benefits_pourcent = None, benefits_euros = None):
+    def __init__(self, name, cost_euros, benefits_pourcent):
         """
         Args :
             name : Name of the action
@@ -15,13 +15,11 @@ class Action:
         self.name = name
         self.cost_euros = float(cost_euros)
         self.benefits_pourcent = float(benefits_pourcent.replace("%", ""))
-        self.benefits_euros = float(benefits_centimes)
 
     @property
     def benefits_euros(self):
         """ Benefits of the action, in euros """
-        if self.benefits_pourcent :
-            return self.benefits_pourcent*self.cost_euros / 100
+        return self.benefits_pourcent*self.cost_euros / 100
 
     @property
     def cost_centimes(self):
@@ -46,26 +44,17 @@ def get_all_actions():
     and add it to the "all_actions" list
     """
     all_actions = []
-    with open('actions_list.csv', mode='r') as csv_file:
-        csv_reader = csv.reader(csv_file)
-        first_row = next(csv_reader)
-        if first_row[2]== "Bénéfice (après 2 ans)" :
-            for row in csv_reader:
-                
-                name = row[0]
-                cost_euros = row[1]
-                benefits_pourcent = row[2]
-                if float(cost_euros) > 0:
-                    all_actions.append(Action(name, cost_euros, benefits_pourcent))
-        elif first_row[2] == "profit" :
-            for row in csv_reader:
-                
-                name = row[0]
-                cost_euros = row[1]
-                benefits_pourcent = row[2]
-                if float(cost_euros) > 0:
-                    all_actions.append(Action(name, cost_euros, benefits_pourcent))
 
+    with open('actions_list.csv', mode='r') as csv_file:
+        
+        csv_reader = csv.reader(csv_file)
+        next(csv_reader)
+        for row in csv_reader:
+            name = row[0]
+            cost_euros = row[1]
+            benefits_pourcent = row[2]
+            if float(cost_euros) > 0:
+                all_actions.append(Action(name, cost_euros, benefits_pourcent))
 
     return all_actions
 
@@ -110,7 +99,6 @@ def get_best_combo(budget_euros, all_actions):
         "total_cost_euros": 0,
         "total_benefits_euros": 0
         }
-
     while actual_budget >= 0 and action_index >= 0:
         action = all_actions[action_index - 1]
         if matrice[action_index][actual_budget] == (
