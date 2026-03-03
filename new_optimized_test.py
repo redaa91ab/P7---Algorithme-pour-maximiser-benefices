@@ -4,7 +4,7 @@ import time
 
 class Action:
     """ Class that represents an action """
-    def __init__(self, name, cost_euros, benefits_pourcent = None, benefits_euros = None):
+    def __init__(self, name, cost_euros, benefits_euros = None, benefits_pourcent = None):
         """
         Args :
             name : Name of the action
@@ -14,15 +14,13 @@ class Action:
         """
         self.name = name
         self.cost_euros = float(cost_euros)
-        self.benefits_pourcent = float(benefits_pourcent.replace("%", ""))
-        self.benefits_euros = float(benefits_centimes)
-
-    @property
-    def benefits_euros(self):
-        """ Benefits of the action, in euros """
-        if self.benefits_pourcent :
-            return self.benefits_pourcent*self.cost_euros / 100
-
+        if benefits_euros :  
+            self.benefits_euros = float(benefits_euros) 
+            self.benefits_pourcent = self.benefits_euros*100 / self.cost_euros
+        elif benefits_pourcent :   
+            self.benefits_pourcent = float(benefits_pourcent.replace("%", ""))
+            self.benefits_euros = self.benefits_pourcent*self.cost_euros / 100
+        
     @property
     def cost_centimes(self):
         """ Cost of the action, in centimes """
@@ -31,7 +29,7 @@ class Action:
     @property
     def benefits_centimes(self):
         """ Benefits of the action, in centimes """
-        return self.benefits_pourcent*self.cost_centimes / 100
+        return int(self.benefits_euros * 100)
 
     @classmethod
     def format_number(self, number):
@@ -46,26 +44,24 @@ def get_all_actions():
     and add it to the "all_actions" list
     """
     all_actions = []
-    with open('actions_list.csv', mode='r') as csv_file:
+    with open('dataset2.csv', mode='r') as csv_file:
         csv_reader = csv.reader(csv_file)
-        first_row = next(csv_reader)
-        if first_row[2]== "Bénéfice (après 2 ans)" :
+        next(csv_reader)
+        second_row = next(csv_reader)
+        if "%" in second_row[2] :
             for row in csv_reader:
-                
                 name = row[0]
                 cost_euros = row[1]
                 benefits_pourcent = row[2]
                 if float(cost_euros) > 0:
-                    all_actions.append(Action(name, cost_euros, benefits_pourcent))
-        elif first_row[2] == "profit" :
+                    all_actions.append(Action(name, cost_euros, benefits_pourcent = benefits_pourcent))
+        else :
             for row in csv_reader:
-                
                 name = row[0]
                 cost_euros = row[1]
-                benefits_pourcent = row[2]
+                benefits_euros = row[2]
                 if float(cost_euros) > 0:
-                    all_actions.append(Action(name, cost_euros, benefits_pourcent))
-
+                    all_actions.append(Action(name, cost_euros, benefits_euros= benefits_euros))
 
     return all_actions
 
@@ -135,11 +131,11 @@ def view_best_combo(best_combo):
         print(
             f"\n> {action.name} :"
             f"\n  Cost : {Action.format_number(action.cost_euros)}€"
-            f"\n  Benefits after 2 years : {Action.format_number(action.benefits_euros)}€"
+            f"\n  Benefits : {Action.format_number(action.benefits_euros)}€"
             f"({Action.format_number(action.benefits_pourcent)}%)"
               )
     print(f"\nTotal cost : {Action.format_number(best_combo["total_cost_euros"])}€")
-    print(f"Total benefits (after 2 years) : {Action.format_number(best_combo["total_benefits_euros"])}€")
+    print(f"Total benefits : {Action.format_number(best_combo["total_benefits_euros"])}€")
 
 
 def timer(func):
