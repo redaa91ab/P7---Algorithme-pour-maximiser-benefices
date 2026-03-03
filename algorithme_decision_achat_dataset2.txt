@@ -1,86 +1,222 @@
 List of actions to buy :
 
-> Share-ECAQ :
-  Cost : 31.66€
-  Benefits after 2 years : 12.5€(39.49%)
+> Share-GYES :
+  Cost : 12.71€
+  Benefits : 25.9€(203.78%)
 
-> Share-IXCI :
-  Cost : 26.32€
-  Benefits after 2 years : 10.37€(39.4%)
+> Share-ZGFP :
+  Cost : 11.69€
+  Benefits : 31€(265.18%)
 
 > Share-FWBE :
   Cost : 18.31€
-  Benefits after 2 years : 7.29€(39.82%)
-
-> Share-ZOFA :
-  Cost : 25.32€
-  Benefits after 2 years : 10.07€(39.78%)
+  Benefits : 39.82€(217.48%)
 
 > Share-PLLK :
   Cost : 19.94€
-  Benefits after 2 years : 7.96€(39.91%)
+  Benefits : 39.91€(200.15%)
+
+> Share-JWDZ :
+  Cost : 2.09€
+  Benefits : 32.2€(1540.67%)
+
+> Share-DEPW :
+  Cost : 2.3€
+  Benefits : 10.47€(455.22%)
+
+> Share-MEQV :
+  Cost : 5.49€
+  Benefits : 38.27€(697.09%)
+
+> Share-TQMM :
+  Cost : 10.7€
+  Benefits : 24.3€(227.1%)
 
 > Share-LXZU :
   Cost : 4.24€
-  Benefits after 2 years : 1.68€(39.54%)
+  Benefits : 39.54€(932.55%)
 
-> Share-YFVZ :
-  Cost : 22.55€
-  Benefits after 2 years : 8.82€(39.1%)
+> Share-KRRA :
+  Cost : 15.28€
+  Benefits : 34.9€(228.4%)
 
-> Share-ANFX :
-  Cost : 38.55€
-  Benefits after 2 years : 15.31€(39.72%)
+> Share-RWIW :
+  Cost : 8.93€
+  Benefits : 18.65€(208.85%)
 
-> Share-PATS :
-  Cost : 27.7€
-  Benefits after 2 years : 11.07€(39.97%)
+> Share-JCWZ :
+  Cost : 3.86€
+  Benefits : 8.13€(210.62%)
+
+> Share-LAIC :
+  Cost : 8.57€
+  Benefits : 28.37€(331.04%)
+
+> Share-OEYT :
+  Cost : 14.92€
+  Benefits : 32.1€(215.15%)
+
+> Share-KOVS :
+  Cost : 3.3€
+  Benefits : 15.43€(467.58%)
+
+> Share-ZKOZ :
+  Cost : 13.65€
+  Benefits : 26.62€(195.02%)
 
 > Share-SCWM :
   Cost : 6.42€
-  Benefits after 2 years : 2.45€(38.1%)
+  Benefits : 38.1€(593.46%)
 
-> Share-NDKR :
-  Cost : 33.06€
-  Benefits after 2 years : 13.19€(39.91%)
+> Share-DQXJ :
+  Cost : 7.64€
+  Benefits : 25.63€(335.47%)
 
-> Share-ALIY :
-  Cost : 29.08€
-  Benefits after 2 years : 11.61€(39.93%)
+> Share-ZLMC :
+  Cost : 2.47€
+  Benefits : 31.45€(1273.28%)
 
-> Share-JWGF :
-  Cost : 48.69€
-  Benefits after 2 years : 19.44€(39.93%)
+> Share-JMLZ :
+  Cost : 1.27€
+  Benefits : 24.71€(1945.67%)
 
-> Share-JGTW :
-  Cost : 35.29€
-  Benefits after 2 years : 13.91€(39.43%)
+> Share-FUGM :
+  Cost : 1.94€
+  Benefits : 16.83€(867.53%)
 
-> Share-FAPS :
-  Cost : 32.57€
-  Benefits after 2 years : 12.88€(39.54%)
+> Share-KPBW :
+  Cost : 8.23€
+  Benefits : 37.21€(452.13%)
 
-> Share-VCAX :
-  Cost : 27.42€
-  Benefits after 2 years : 10.69€(38.99%)
+> Share-VVYP :
+  Cost : 11.07€
+  Benefits : 36.92€(333.51%)
+
+> Share-FCHD :
+  Cost : 12.39€
+  Benefits : 38.28€(308.96%)
+
+> Share-PILL :
+  Cost : 15.36€
+  Benefits : 31.89€(207.62%)
+
+> Share-MZLD :
+  Cost : 14.98€
+  Benefits : 36.62€(244.46%)
+
+> Share-FAKH :
+  Cost : 7.65€
+  Benefits : 38.46€(502.75%)
+
+> Share-TMRA :
+  Cost : 17.72€
+  Benefits : 34.66€(195.6%)
+
+> Share-EOEN :
+  Cost : 11.96€
+  Benefits : 27.67€(231.35%)
+
+> Share-LKSD :
+  Cost : 0.12€
+  Benefits : 9.14€(7616.67%)
+
+> Share-GIXZ :
+  Cost : 17.23€
+  Benefits : 35.66€(206.96%)
+
+> Share-CXYC :
+  Cost : 8.5€
+  Benefits : 35.73€(420.35%)
+
+> Share-DHIE :
+  Cost : 11.03€
+  Benefits : 20.59€(186.67%)
+
+> Share-OWMP :
+  Cost : 9.43€
+  Benefits : 23.39€(248.04%)
+
+> Share-BBNF :
+  Cost : 3.29€
+  Benefits : 28.48€(865.65%)
+
+> Share-BPPA :
+  Cost : 3.97€
+  Benefits : 14.73€(371.03%)
+
+> Share-GRVG :
+  Cost : 7.13€
+  Benefits : 24.38€(341.94%)
+
+> Share-OCKK :
+  Cost : 3.16€
+  Benefits : 36.39€(1151.58%)
+
+> Share-BIJV :
+  Cost : 18.05€
+  Benefits : 37.44€(207.42%)
+
+> Share-DSOO :
+  Cost : 1.49€
+  Benefits : 12.11€(812.75%)
+
+> Share-IWTG :
+  Cost : 11.75€
+  Benefits : 35.05€(298.3%)
+
+> Share-TGPO :
+  Cost : 14.38€
+  Benefits : 35.25€(245.13%)
+
+> Share-VQQX :
+  Cost : 9.62€
+  Benefits : 37.78€(392.72%)
+
+> Share-RBCS :
+  Cost : 9.4€
+  Benefits : 30.1€(320.21%)
 
 > Share-LFXB :
   Cost : 14.83€
-  Benefits after 2 years : 5.9€(39.79%)
+  Benefits : 39.79€(268.31%)
 
-> Share-DWSK :
-  Cost : 29.49€
-  Benefits after 2 years : 11.6€(39.35%)
+> Share-XYMR :
+  Cost : 14.49€
+  Benefits : 35.3€(243.62%)
+
+> Share-YIFQ :
+  Cost : 15.85€
+  Benefits : 34.64€(218.55%)
+
+> Share-DYVD :
+  Cost : 0.28€
+  Benefits : 10.25€(3660.71%)
+
+> Share-BMHD :
+  Cost : 4.85€
+  Benefits : 38.29€(789.48%)
 
 > Share-XQII :
   Cost : 13.42€
-  Benefits after 2 years : 5.3€(39.51%)
+  Benefits : 39.51€(294.41%)
+
+> Share-FFZA :
+  Cost : 4.57€
+  Benefits : 34.5€(754.92%)
 
 > Share-ROOM :
   Cost : 15.06€
-  Benefits after 2 years : 5.91€(39.23%)
+  Benefits : 39.23€(260.49%)
 
-Total cost : 499.92€
-Total benefits (after 2 years) : 197.96€
+> Share-FUDY :
+  Cost : 7.03€
+  Benefits : 19.96€(283.93%)
 
-Time : 6.608839750289917 seconds
+> Share-GEBJ :
+  Cost : 5.87€
+  Benefits : 37.95€(646.51%)
+
+Total cost : 499.88€
+Total benefits : 1609.68€
+
+Time : 7.926649332046509 seconds
