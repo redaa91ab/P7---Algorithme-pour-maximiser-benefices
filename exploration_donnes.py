@@ -1,6 +1,6 @@
 import pandas as pandas
 
-data = pandas.read_csv("dataset2.csv")
+data = pandas.read_csv("dataset1.csv")
 #print(data)
 
 data_clean = data[(data["price"] > 0) & (data["profit"] > 0)]
@@ -9,7 +9,7 @@ data_trash =  data[data["price"] <= 0]
 #print(data_trash, "\n", len(data_trash), " rows")
 
 price_data_sorted = data_clean.sort_values(by="price", ascending=False)
-#print(price_data_sorted)
+print(price_data_sorted)
 
 moyenne_price = data_clean["price"].mean()
 #print(moyenne_price)
