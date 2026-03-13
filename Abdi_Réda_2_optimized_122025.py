@@ -45,7 +45,7 @@ def get_all_actions():
     """
     all_actions = []
 
-    with open('dataset2.csv', mode='r') as csv_file:
+    with open('dataset1.csv', mode='r') as csv_file:
         
         csv_reader = csv.reader(csv_file)
         next(csv_reader)
